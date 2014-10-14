@@ -1,0 +1,231 @@
+/* Style-sheet for wunchiou.com */
+@import url(font.css);
+
+html {
+	height: 100%;
+	background: #fff url(../images/wun-bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	font-family: "Vollkorn", serif;
+}
+
+h1, h2, h3, nav {
+	font-family: "Vollkorn", sans-serif;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+a:active {
+	position: relative;
+	top: 2px;
+}
+
+img {
+	border: none;
+}
+
+code {
+	display: block;
+	white-space: pre;
+	overflow: auto;
+	background-color: WhiteSmoke;
+	border: 1px solid gray;
+	padding: 8px;
+	margin: 5px;
+}
+
+.rounded_top, .content, article {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.rounded_bottom, .content, article {
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.shaded, article {
+	background-color: white;
+	background-color: rgba(255,255,255,0.8);
+}
+
+/********** Headers *********************/
+h1 {
+	font-size: 2.5em;
+	font-weight: 400;
+	line-height: 1em;
+	margin-top: 0em;
+	padding: 7px;
+	margin-bottom: 1em;
+}
+
+h2, section article h1 {
+	font-size: 1.75em;
+	font-weight: 400;
+	line-height: 1em;
+	margin-top: 0em;
+	margin-bottom: 0.25em;
+}
+
+section h1 {
+	text-align: center;
+	margin-top: 2em ;
+}
+
+section h3 {
+	text-align: center;
+}
+
+#fixed_header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	z-index: 9001;
+}
+
+#fixed_header h1 {
+	display:inline-block;
+	margin-bottom: 0em;
+}
+
+h1 a {
+	text-decoration: none;
+}
+
+/********** Navigation Bar ***************/
+
+nav {
+	display: inline-block;
+	z-index: -1;
+}
+
+nav a {
+	padding: 0em 0.9em 0em 0.9em;
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+nav a:hover {
+	border-top: 3px solid black;
+}
+
+.nav_selected:before {
+	content: "[";
+}
+
+.nav_selected:after {
+	content: "]";
+}
+
+/********** Content **********************/
+
+section {
+	min-height: 100%; 
+	height:auto !important;
+	height: 100%;
+	margin-top: 0px;
+	padding: 7px 5em 10em 5em;
+}
+
+.content, .post, article {
+	padding: 15px;
+	margin-bottom: 1em;
+}
+
+/* Float Post Images left */
+.p_image_embed, .alignleft {
+	display: inline;
+	float: left;
+	margin: auto 15px 15px auto;
+}
+
+/* Clearfix */
+article:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+#pictures img, #work img {
+	margin: 4px;
+}
+
+#about #statement {
+	position: absolute;
+	top: 10%;
+	width:50%
+}
+
+.down {
+	position: absolute;
+	bottom: 10%;
+}
+
+time {
+	font-size: 0.85em;
+	font-style: italic;
+	display: block;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+#about, #pictures, #resume {
+	background-color:rgba(255,255,255,0.75);
+	-webkit-box-shadow: 0px 0px 4px 0px #000000;
+	box-shadow: 0px 0px 4px 0px #000000;	
+}
+
+#posts, #work, #contact {
+	background-color:rgba(255,255,255,0.1);	
+}
+
+#contact ul li {
+	display: inline;
+	margin: 5px;
+}
+
+#contact ul li a {
+	font-family: 'JustVector',Arial,sans-serif;
+	text-decoration: none;
+	font-size: 4em;
+}
+
+#resume h2 {
+	/* border-top: 1px solid #333; */
+}
+
+#resume tr td {
+	vertical-align: top;
+	padding: 1em;
+}
