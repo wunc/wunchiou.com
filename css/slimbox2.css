@@ -58,7 +58,7 @@
 	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
 	font-size: 10px;
 	color: #666;
-	line-height: 1.6em;
+	line-height: 1.4em;
 	text-align: left;
 	border: 10px solid #fff;
 	border-top-style: none;
@@ -79,7 +79,5 @@
 }
 
 #lbCaption {
-	font-family: "Vollkorn", sans-serif;
-	font-size: 1.6em;
-	color:black;
+	font-weight: bold;
 }

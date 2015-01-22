@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
 		} else {
 			$('#post_content').html("Sorry, cannot load posts right now.");
 		}
-	}).complete(ajaxloaded);
+	}).always(ajaxloaded);
 
    	// ---------------------------------------
    	// Load photos from Flickr
@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
 			console.log(json.stat);
 			$('#pictures_content').html("Sorry, cannot load pictures right now.");
 		}
-	}).complete(ajaxloaded);
+	}).always(ajaxloaded);
 
    	// ---------------------------------------
    	// Set contact hover tip effect
@@ -146,7 +146,7 @@ jQuery(document).ready(function($) {
 						return [el.href, (el.title || el.firstChild.alt)];
 				});
 			});
-			// Register tipTip icons
+			// Register tipTip icons for resume icons
 			$('#resume_content a[title]').tipTip({defaultPosition:"top",edgeOffset:20});
    		}
 	}
