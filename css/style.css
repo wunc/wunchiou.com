@@ -1,5 +1,6 @@
 /* Style-sheet for wunchiou.com */
-@import url(font.css);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 html {
 	height: 100%;
@@ -216,7 +217,6 @@ time {
 }
 
 #contact ul li a {
-	font-family: 'JustVector',Arial,sans-serif;
 	text-decoration: none;
 	font-size: 4em;
 }

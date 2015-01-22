@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 	function setlocation(loc) {
 		navlocation = loc;
 		$('nav > a[href!='+loc+']').removeClass('nav_selected');
-		$('nav > a[href='+loc+']').addClass('nav_selected')
+		$('nav > a[href='+loc+']').addClass('nav_selected');
 	}
 
 	// ---------------------------------------
@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
    	$('#post_content').html('Loading posts from Wordpress ...');
 	$.getJSON("https://public-api.wordpress.com/rest/v1/sites/wunchiou.wordpress.com/posts/?number=5&callback=?",
 	function(json) {
-		if (json != "error"){
+		if (json !== "error"){
 			$('#post_content').html('');
 			$.each(json.posts, function(i,post) {
 				var article = $('<article>', {html: post.content});
@@ -133,20 +133,21 @@ jQuery(document).ready(function($) {
 			});
    			// set the waypoints
 			$('section').waypoint(function(event, direction) {
-				if (direction === 'down') setlocation('#'+this.id);
-				else setlocation( navlist[navlist.indexOf('#'+this.id)-1] );
+				if (direction === 'down') {setlocation('#'+this.id);}
+				else {setlocation( navlist[navlist.indexOf('#'+this.id)-1] );}
 			}, {
 		   		offset: '50%'  // middle of the page
 			});
 			// Register  image links with Slimbox2
-			$('#work_content article').each(function(i,e) {
+			$('#work_content article').each(function() {
 				$(this).find('a > img').parent().slimbox({
 					resizeDuration:200,imageFadeDuration:200,captionAnimationDuration:100},
 					function(el) {
 						return [el.href, (el.title || el.firstChild.alt)];
 				});
 			});
-
+			// Register tipTip icons
+			$('#resume_content a[title]').tipTip({defaultPosition:"top",edgeOffset:20});
    		}
 	}
 });
