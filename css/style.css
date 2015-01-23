@@ -183,6 +183,7 @@ article:after {
 }
 
 #about #statement {
+	font-size: 1.15em;
 	position: absolute;
 	top: 10%;
 	width:50%
