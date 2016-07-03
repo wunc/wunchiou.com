@@ -48,10 +48,10 @@
 
 #lbNextLink {
 	right: 0;
-}
 
-#lbNextLink:hover {
-	background: transparent url(../images/nextlabel.gif) no-repeat 100% 15%;
+	&:hover {
+		background: transparent url(../images/nextlabel.gif) no-repeat 100% 15%;
+	}
 }
 
 #lbBottom {
