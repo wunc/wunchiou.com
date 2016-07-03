@@ -75,6 +75,10 @@ h1 {
 	a {
 		text-decoration: none;
 	}
+
+	@media(max-width: $sm_width) {
+		font-size: 1.75em;
+	}
 }
 
 h2, section article h1 {
@@ -83,6 +87,10 @@ h2, section article h1 {
 	line-height: 1em;
 	margin-top: 0em;
 	margin-bottom: 0.25em;
+
+	@media(max-width: $sm_width) {
+		font-size: 1.5em;
+	}
 }
 
 section {
@@ -109,7 +117,11 @@ section {
 
 	h1 {
 		display:inline-block;
-		margin-bottom: 0em;
+		margin-bottom: 0;
+
+		@media(max-width: $sm_width) {
+			padding-bottom: 0;
+		}
 	}
 }
 
@@ -120,13 +132,25 @@ nav {
 	z-index: -1;
 
 	a {
-		padding: 0em 0.9em 0em 0.9em;
+		padding: 0 0.9em;
 		text-decoration: none;
 		font-size: 1.5em;
 		font-weight: 300;
 
 		&:hover {
 			border-top: 3px solid black;
+		}
+
+		@media(max-width: $lg_width) {
+			padding: 0 0.2em;
+		}
+
+		@media(max-width: $sm_width) {
+			font-size: 1em;
+		}
+
+		@media(max-width: $xs_width) {
+			padding: 0;
 		}
 	}
 }
@@ -150,11 +174,23 @@ section {
 	height: 100%;
 	margin-top: 0px;
 	padding: 7px 5em 10em 5em;
+
+	@media(max-width: $md_width) {
+		padding: 7px 2.5em 5em 2.5em;
+	}
+
+	@media(max-width: $sm_width) {
+		padding: 7px 1em 2em 1em;
+	}
 }
 
 .content, .post, article {
 	padding: 15px;
 	margin-bottom: 1em;
+
+	@media(max-width: $sm_width) {
+		padding: 10px;
+	}
 }
 
 /* Float Post Images left */
@@ -162,6 +198,7 @@ section {
 	display: inline;
 	float: left;
 	margin: auto 15px 15px auto;
+	max-width: 100% !important;
 }
 
 /* Clearfix */
@@ -175,6 +212,11 @@ article:after {
 
 #pictures img, #work img {
 	margin: 4px;
+	
+	@media(max-width: $sm_width) {
+		margin: 0;
+		max-width: 50%;
+	}
 }
 
 #about {
@@ -183,7 +225,15 @@ article:after {
 		font-size: 1.15em;
 		position: absolute;
 		top: 10%;
-		width:50%
+		width:50%;
+
+		@media(max-width: $lg_width) {
+			top: 20%;
+		}
+
+		@media(max-width: $sm_width) {
+			width: 75%;
+		}
 	}
 
 }
@@ -210,17 +260,48 @@ time {
 	background-color:rgba(255,255,255,0.1);	
 }
 
-#contact ul li {
-	display: inline;
-	margin: 5px;
+#contact {
 
-	a {
-		text-decoration: none;
-		font-size: 4em;
+	ul {
+		padding: 0;
+
+		li {
+			display: inline;
+			margin: 5px;
+
+			a {
+				text-decoration: none;
+				font-size: 4em;
+			}
+		}
+	}
+
+	.content {
+		text-align: center;
 	}
 }
 
-#resume tr td {
-	vertical-align: top;
-	padding: 1em;
+#resume {
+
+	table {
+
+		tr td {
+			vertical-align: top;
+			padding: 1em;
+
+			@media(max-width: $md_width) {
+				&:first-of-type {
+					width: 15%;
+					h3 {
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+
+		@media(max-width: $md_width) {
+			table-layout: fixed;
+			width: 100%;
+		}
+	}
 }
