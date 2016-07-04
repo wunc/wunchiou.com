@@ -4,9 +4,17 @@
 
 html {
 	height: 100%;
-	background: #fff url(../images/wun-bg.jpg) no-repeat center center fixed;
+	background-color: #fff;
+	background-image: url(../images/wun-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 	background-size: cover;
 	box-sizing: border-box;
+
+	@media(max-width: $md_width) {
+		background-image: url(../images/wun-bg-mobile.jpg);
+	}
 }
 
 *, *:before, *:after {
