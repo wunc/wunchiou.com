@@ -1,6 +1,8 @@
 wunchiou.com
 ============
 
+[![Build Status](https://travis-ci.org/wunc/wunchiou.com.svg?branch=master)](https://travis-ci.org/wunc/wunchiou.com)
+
 Wun's personal website
 
 As one of my summer projects, I wanted to redesign my personal website. I really had three motivations for doing so:
